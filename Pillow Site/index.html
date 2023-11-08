@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pillow Site</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
+
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+            position: relative;
+        }
+
+        .logo {
+            margin-top: 20px;
+            margin-left: 80px;
+
+        }
+
+        nav  {
+            position : fixed;
+          
+
+        }
+
+        ul {
+            display: flex;
+            margin-left: 400px;
+
+        }
+
+        li {
+            list-style: none;
+            padding-left: 50px;
+            margin-top: -35px;
+
+        }
+
+        a {
+            text-decoration: none;
+            font-family: Poppins;
+            font-size: 15px;
+            color: #4B3049;
+        }
+
+        .side {
+            margin-left: 1100px;
+            font-size: 23px;
+            margin-top: -35px;
+            word-spacing: 22px;
+            color: #4B3049;
+        }
+
+        .heading {
+            font-family: Inter;
+            margin-top: 200px;
+            font-size: 65px;
+            width: 400px;
+            margin-left: 80px;
+            color: #4B3049;
+            font-weight: 540;
+
+        }
+
+        .para {
+            width: 480px;
+            margin-left: 80px;
+            font-size: 20px;
+            color: #895376;
+            margin-top: 10px;
+            font-family: poppins;
+        }
+
+        .banner {
+            position: absolute;
+            margin-left: 620px;
+            margin-top: -320px;
+        }
+
+        #btn {
+            width: 160px;
+            height: 60px;
+            border-radius: 5px;
+            margin-top: 80px;
+            margin-left: 80px;
+            border: none;
+            color: aliceblue;
+            background-color: #B08EAD;
+            font-family: Inter;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .banner1 {
+            position: absolute;
+            z-index: 999;
+            margin-left: 27px;
+            margin-top: -340px;
+        }
+
+        .box {
+            z-index: 000;
+            position: relative;
+            margin-top: 200px;
+            height: 380px;
+            width: 330px;
+            background-color: #B08EAD;
+        }
+
+        .para1 {
+            font-family: Inter;
+            margin-left: 770px;
+            margin-top: -250px;
+            color: #895376;
+
+        }
+
+        .head1 {
+            font-family: Inter;
+            font-weight: 500;
+            margin-left: 767px;
+            margin-top: 20px;
+            font-size: 40px;
+            width: 450px;
+            color: #4B3049;
+
+        }
+
+        #bt1{
+            width: 160px;
+            height: 60px;
+            border-radius: 5px;
+            font-family: Inter;
+            font-size: 14px;
+            font-weight: bold;
+            margin-left: 764px;
+            margin-top: 48px;
+            border: solid 1px #895376 ;
+            color: #895376 ;
+            background-color: #FFFFFF ;
+        }
+
+        .box2 {
+            z-index: 000;
+            position: absolute;
+            height: 380px;
+            width: 330px;
+            background-color: #B08EAD;
+            margin-left: 897px;
+            margin-top: -45px;
+        }
+
+        .banner2 {
+            position: relative;
+            z-index: 999;
+            margin-left: 767px;
+            margin-top: 200px;
+        }
+
+        .para2 {
+            font-family: Inter;
+            color: #895376;
+            margin-left: 32px;
+            margin-top: -300px;
+            margin-bottom: 20px;
+        }
+
+        .head2 {
+            font-family: Inter;
+            font-weight: 500;
+            width: 450px;
+            color: #4B3049;
+            font-size: 40px;
+            margin-left: 27px;
+            margin-bottom: -50px;
+
+        }
+
+        #btn2 {
+            width: 160px;
+            height: 60px;
+            border-radius: 5px;
+            font-family: Inter;
+            font-size: 14px;
+            font-weight: bold;
+            margin-left: 27px;
+            margin-top: 90px;
+            border: solid 1px #895376 ;
+            color: #895376 ;
+            background-color: #FFFFFF ;
+        }
+
+        .head3 {
+            font-family: poppins;
+            font-size: 35px;
+            text-align: center;
+            color: #4B3049;
+            padding-top: 180px;
+
+
+        }
+
+        .box1 {
+            margin-top: 200px;
+            background-color: #F4EDF2;
+            height: 1300px;
+
+        }
+
+        .head4,
+        .head5,
+        .head6 {
+            font-family: poppins;
+            font-weight: 400;
+            color: #4B3049;
+            width: 350px;
+        }
+
+        .para3,
+        .para4,
+        .para5 {
+            font-size: 20px;
+            font-family: poppins;
+            color: #895376;
+        }
+
+        .card {
+            /* margin-left:100px;
+    margin-top: 60px;  */
+        }
+
+        .card,
+        .card1,
+        .card2 {
+            margin-top: 60px !important;
+            margin-left: 80px !important;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 380px 380px 380px;
+            gap: 2em;
+
+        }
+
+        .container1 {
+            display: grid;
+            grid-template-columns: 380px 380px 380px;
+            gap: 2em;
+
+        }
+
+        .slider {
+            background-color: #B08EAD;
+            height: 400px;
+
+        }
+
+        .para6 {
+            position: absolute;
+            font-family: Poppins;
+            font-size: 22px;
+            color: #FAF7FA;
+            width: 800px;
+            text-align: center;
+            font-weight: 480;
+            margin-left: 260px;
+            margin-top: 30px;
+
+
+
+
+        }
+
+        .head7 {
+            font-size: 15px;
+            color: #FAF7FA;
+            margin-left: 580px;
+            margin-top: 120px;
+            font-family: Poppins;
+
+        }
+
+        .left {
+            position: relative;
+            margin-top: -79px;
+            font-size: 100px;
+            margin-left: 60px;
+            color: #4B3049;
+        }
+
+        .right {
+            font-size: 100px;
+            margin-top: -110px;
+            margin-left: 1150px;
+            color: #4B3049;
+        }
+
+        .head8 {
+            font-family: poppins;
+            font-size: 40px;
+            font-weight: 480;
+            width: 600px;
+            color: #4B3049;
+            margin-top: 200px;
+            margin-left: 120px;
+        }
+
+        .para7 {
+            font-family: Inter;
+            font-size: 14px;
+            width: 450px;
+            color: #747070;
+            margin-left: 800px;
+            margin-top: -180px;
+            line-height: 2.0;
+
+        }
+
+        #box,
+        #box1,
+        #box2,
+        #box3 {
+            border: solid 2px #E4D3DF;
+            border-radius: 4px;
+            width: 280px;
+            height: 160px;
+            padding: 10px;
+            text-align: center;
+            background-color: white;
+            padding-top: 35px;
+            color: #4B3049;
+        }
+
+        .container2 {
+            font-size: 50px;
+            margin-top: 200px;
+            display: grid;
+            grid-template-columns: 200px 200px 200px 200px;
+            gap: 2em;
+            margin-left: 80px;
+        }
+        h4{
+            font-family: poppins;
+            font-size: 20px;
+            text-align: center;
+            padding-bottom: 1%; 
+            font-weight: 300;
+        }
+        .box4{
+            background-color: #4B3049;
+            height: 500px;
+            padding-top: 150px;
+            margin-top: 200px;
+        }
+        .head9{
+            font-family: poppins;
+            font-size: 35px;
+            color: #FFFFFF;
+            font-weight: 550;
+            text-align: center;
+
+        }
+        .para8{
+            color: #FFFFFF;
+text-align: center;
+font-family: poppins;
+font-size: 14px;
+width: 750px;
+margin-left: 330px;
+margin-top: 10px;
+line-height: 2.0;
+        }
+        #search{
+            width: 600px;
+            height: 60px;
+            border-radius: 40px;
+            margin-left: 400px;
+            border: solid 1px #FFFFFF;
+            background-color: #4B3049;
+            padding-left: 30px;
+            position: absolute;
+            margin-top: 40px;
+            
+
+        }
+     ::placeholder{
+        color: #DAC8D5;
+     }
+
+        #button1{
+            height:55px ;
+            border-radius: 40px;
+            width: 150px;
+            font-family: poppins;
+            background-color: #9A7C97;
+            border: none;
+            font-weight: 500;
+            color: #FFFFFF;
+            position: relative;
+           margin-left: 847px;
+           margin-top: 2px;
+           margin-top: 42px;
+
+        }
+        .footer-nav{
+            margin-top: 150px;
+
+        }
+        .logo1{
+            margin-left: 80px;
+
+        }
+       .footer_nav{
+       display: flex;
+       margin-left: 150px;
+    
+
+
+       }
+       .social{
+        margin-left: 1050px;
+        font-size: 40px;
+        margin-top: -46px;
+        word-spacing: 3px;
+        color: #4B3049;
+
+       }
+       .End{
+        background-color: #F4EDF2;
+      margin-top: 160px;
+      font-family: poppins;
+      color: #895376;
+      font-size: 14px;
+      padding-top: 40px;
+      height: 100px;
+
+       }
+       .Etext{
+        margin-left: 100px;
+        
+       }
+       ul li ul.dropdown-menu{
+        display: none;
+       }
+       ul li a:hover ul.dropdown-menu{
+        display: block;
+       }
+       a:hover{
+        color: #B08EAD;
+       }
+       #btn:hover{
+        transition: 0.7s;
+        cursor: pointer;
+        border: solid 2px #B08EAD;
+        background-color: #FFFFFF;
+        color: #B08EAD;
+
+       }
+      #btn2:hover{
+        transition: 0.7s;
+        cursor: pointer;
+        background-color: #B08EAD;
+        color: #FFFFFF;
+        border: solid 2px #FFFFFF;
+      }
+      #bt1:hover{
+        transition: 0.7s;
+        cursor: pointer;
+        background-color: #B08EAD;
+        color: #FFFFFF;
+        border: solid 2px #FFFFFF;
+
+      }
+      #button1:hover{
+
+        transition: 0.7s;
+        cursor: pointer;
+        background-color: #FFFFFF;
+        color: #B08EAD;
+        border: solid 2px #B08EAD;
+      }
+    
+
+
+      #soc:hover{
+        cursor: pointer;
+        color: #E4D3DF;
+      }
+  .side:hover{
+    cursor: pointer;
+  }
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <div class="logo">
+            <img src="Image/logo.webp" alt="logo">
+        </div>
+
+        <nav>
+            <ul>
+                
+            </ul>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Product <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Page 1-1</a></li>
+                        <li><a href="#">Page 1-2</a></li>
+                        <li><a href="#">Page 1-3</a></li>
+                      </ul>
+                </li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Pages <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Page 1-1</a></li>
+                        <li><a href="#">Page 1-2</a></li>
+                        <li><a href="#">Page 1-3</a></li>
+                      </ul>
+                </li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Blog <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Page 1-1</a></li>
+                        <li><a href="#">Page 1-2</a></li>
+                        <li><a href="#">Page 1-3</a></li>
+                      </ul>
+                </li>
+                <li><a href="#">Contact</a></li>
+
+            </ul>
+        </nav>
+        <div class="side">
+            <i class="fa fa-search"></i>
+            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+
+        </div>
+
+        <h1 class="heading">Best quality pillow</h1>
+        <p class="para">Seamlessly empower fully researched growth strategies and interoperable internal</p>
+        <div class="banner">
+            <img src="Image/banner.png" width="720px" height="500px">
+        </div>
+        <input type="button" value="Shop Now" id="btn">
+    </div>
+    <section>
+        <div class="box"></div>
+        <div class="banner1">
+
+            <img src="Image/single_product_1.png" width="420px" height="360px">
+        </div>
+        <p class="para1">Started from $10</p>
+        <h1 class="head1">Printed memory foam brief modern throw pillow case</h1>
+        <input type="button" value="Explore Now" id="bt1">
+    </section>
+    <section>
+        <div class="box2"></div>
+        <div class="banner2">
+            <img src="Image/single_product_2.png" width="420px" height="360px">
+        </div>
+        <p class="para2">Started from $10</p>
+        <h1 class="head2">Printed memory foam brief modern throw pillow case</h1>
+        <input type="button" value="Explore Now" id="btn2">
+    </section>
+    <section>
+        <div class="box"></div>
+        <div class="banner1">
+
+            <img src="Image/single_product_3.png" width="420px" height="360px">
+        </div>
+        <p class="para1">Started from $10</p>
+        <h1 class="head1">Printed memory foam brief modern throw pillow case</h1>
+        <input type="button" value="Explore Now" id="bt1">
+    </section>
+    <section>
+        <div class="box1">
+            <h1 class="head3">Trending Items</h1>
+            <div class="container">
+                <div class="card"><img src="Image/tranding_item_1.png" height="" width="">
+                    <h1 class="head4">Cervical pillow for airplane car office nap pillow</h1>
+                    <p class="para3">From $5</p>
+
+                </div>
+                <div class="card1"><img src="Image/tranding_item_2.png" height="" width="">
+                    <h1 class="head5">Cervical pillow for airplane car office nap pillow</h1>
+                    <p class="para4">From $5</p>
+
+                </div>
+
+                <div class="card2"><img src="Image/tranding_item_3.png" height="" width="">
+                    <h1 class="head6">Cervical pillow for airplane car office nap pillow</h1>
+                    <p class="para5">From $5</p>
+
+                </div>
+                <div class="container1">
+                    <div class="card"><img src="Image/tranding_item_4.png" height="" width="">
+                        <h1 class="head4">Cervical pillow for airplane car office nap pillow</h1>
+                        <p class="para3">From $5</p>
+
+                    </div>
+                    <div class="card1"><img src="Image/tranding_item_5.png" height="" width="">
+                        <h1 class="head5">Cervical pillow for airplane car office nap pillow</h1>
+                        <p class="para4">From $5</p>
+
+                    </div>
+
+                    <div class="card2"><img src="Image/tranding_item_6.png" height="" width="">
+                        <h1 class="head6">Cervical pillow for airplane car office nap pillow</h1>
+                        <p class="para5">From $5</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <section>
+
+
+        <div class="slider">
+            <img src="Image/client.png" alt="" height="100px" width="100px"
+                style="margin-left: 580px ; margin-top: 100px;">
+
+            <div class="para6">"Working in conjunction with humanitarian aid agencies, we have supported programmes to
+                help alleviate human suffering.
+            </div>
+            <div class="left"><i class="fa fa-angle-left" aria-hidden="true"></i></div>
+            <div class="right"><i class="fa fa-angle-right" aria-hidden="true"></i></div>
+            <div class="head7">-Micky Mouse</div>
+
+    </section>
+    <section>
+
+        <h1 class="head8">Credibly innovate granular internal or organic sources whereas standards.</h1>
+        <p class="para7">Seamlessly empower fully researched growth strategies and interoperable internal or “organic”
+            sources. Credibly innovate granular internal or “organic” sources whereas high standards in web-readiness.
+        </p>
+
+
+        <div class="container2">
+            <div id="box"><i class="fa fa-credit-card" aria-hidden="true"></i>
+                <h4>Credit Card Support</h4>
+            </div>
+
+            <div id="box1"><i class="fa fa-desktop" aria-hidden="true"></i>
+                <h4>Online Order</h4>
+            </div>
+
+            <div id="box2"><i class="fa fa-truck" aria-hidden="true"></i>
+                <h4>Free Delivery</h4>
+            </div>
+
+            <div id="box3"><i class="fa fa-gift" aria-hidden="true"></i>
+                <h4>Product with Gift</h4>
+            </div>
+
+        </div>
+    </section>
+    <section>
+        <div class="box4">
+
+<h1 class="head9">Get promotions & updates!</h1>
+<p class="para8">Seamlessly empower fully researched growth strategies and interoperable internal or “organic” sources credibly innovate granular internal .</p>
+<input type="search" name="" id="search" placeholder="Enter your mail">
+<input type="button" value="Subscribe" id="button1">
+
+
+        </div>
+    </section>
+    <section>
+
+<div class="footer-nav">
+<div class="logo1">
+    <img src="Image/logo.webp">
+</div>
+<div class="footer_nav">
+<ol class="footer_nav">
+    <li><a href="#" style="color: #4B3049"; >Home</a></li>
+    <li><a href="#" style="color: #4B3049";>About</a></li>
+    <li><a href="#" style="color: #4B3049";>Product</a></li>
+    <li><a href="#" style="color: #4B3049";>Pages</a></li>
+    <li><a href="#" style="color: #4B3049";>Blog</a></li>
+    <li><a href="#" style="color: #4B3049";>Contact</a></li>
+</ol>
+</div>
+</div>
+<div class="social">
+    <i class="fa fa-facebook-square" aria-hidden="true" id="soc"></i>
+    <i class="fa fa-instagram" aria-hidden="true"id="soc"></i>
+    <i class="fa fa-google-plus-square" aria-hidden="true"id="soc"></i>
+    <i class="fa fa-linkedin-square" aria-hidden="true"id="soc"></i>
+</div>
+    </section>
+
+    <section>
+        <div class="End">
+            <span class="Etext">Copyright ©2023 All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by LilKhan</b></span>
+            
+<span style="margin-left: 360px;">Terms & Conditions </span> <span style="margin-left: 40px;">FAQ</span>
+
+        </div>
+    </section>
+</body>
+
+</html>
